@@ -23,6 +23,7 @@ const toast = document.getElementById("toastMessage");
 
 let currentPhase = phase1;
 
+console.log("Changing phase...");
 // ===== SHOW PHASE FUNCTION =====
 
 function showPhase(nextPhase){
@@ -549,3 +550,5 @@ yesBtn.addEventListener("click",celebrate);
 absolutelyBtn.addEventListener("click",celebrate);
 
 console.log("❤️ Project Riu Loaded Successfully ❤️");
+
+console.log("JS Loaded Successfully");
