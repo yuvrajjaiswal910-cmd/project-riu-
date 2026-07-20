@@ -1,0 +1,1307 @@
+/* ==========================================
+   PROJECT RIU ❤️
+   STYLE.CSS - PART 1
+========================================== */
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:#12051f;
+
+color:#ffffff;
+
+overflow:hidden;
+
+height:100vh;
+
+width:100%;
+
+position:relative;
+
+}
+
+/* ==========================
+ROOT COLORS
+========================== */
+
+:root{
+
+--pink:#ff6fb5;
+
+--darkPink:#ff3d9d;
+
+--purple:#8c52ff;
+
+--deep:#12051f;
+
+--white:#ffffff;
+
+--glass:rgba(255,255,255,.08);
+
+--border:rgba(255,255,255,.18);
+
+--shadow:0 0 35px rgba(255,105,180,.25);
+
+}
+
+/* ==========================
+BACKGROUND
+========================== */
+
+#gradient-bg{
+
+position:fixed;
+
+inset:0;
+
+z-index:-20;
+
+background:
+
+linear-gradient(
+135deg,
+#13031e,
+#34104f,
+#59196b,
+#ff5ca8
+);
+
+background-size:400% 400%;
+
+animation:gradientMove 18s ease infinite;
+
+}
+
+/* ==========================
+STARS
+========================== */
+
+#stars{
+
+position:fixed;
+
+inset:0;
+
+z-index:-19;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+/* ==========================
+HEARTS
+========================== */
+
+#hearts{
+
+position:fixed;
+
+inset:0;
+
+z-index:-18;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+/* ==========================
+PETALS
+========================== */
+
+#petals{
+
+position:fixed;
+
+inset:0;
+
+z-index:-17;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+/* ==========================
+SPARKLES
+========================== */
+
+#sparkles{
+
+position:fixed;
+
+inset:0;
+
+z-index:-16;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+/* ==========================
+MAIN
+========================== */
+
+main{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+overflow:hidden;
+
+}
+
+/* ==========================
+PHASE
+========================== */
+
+.phase{
+
+position:absolute;
+
+inset:0;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.phase.active{
+
+display:flex;
+
+animation:fadeIn .8s ease;
+
+}
+
+/* ==========================
+COMMON BOX
+========================== */
+
+.welcome-box,
+.intro-box,
+.lock-container,
+.game-container,
+.ending-container{
+
+width:100%;
+
+max-width:420px;
+
+padding:28px;
+
+border-radius:28px;
+
+background:var(--glass);
+
+backdrop-filter:blur(18px);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+}
+
+/* ==========================
+TITLE
+========================== */
+
+.main-title{
+
+font-family:'Great Vibes',cursive;
+
+font-size:3rem;
+
+color:#fff;
+
+text-shadow:0 0 25px rgba(255,120,190,.8);
+
+margin-bottom:18px;
+
+animation:pulse 2s infinite;
+
+}
+
+.tap-text{
+
+font-size:1rem;
+
+opacity:.9;
+letter-spacing:1px;
+animation:pulse 2s infinite;
+
+}
+
+/* ==========================
+FLOATING LAYERS
+========================== */
+
+#particleLayer,
+#floatingGlow{
+
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+
+}
+
+/* ==========================
+KEYFRAMES
+========================== */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes floatText{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+/* ==========================================
+   PROJECT RIU ❤️
+   STYLE.CSS - PART 2
+========================================== */
+
+/* ==========================
+GLASS CARD
+========================== */
+
+.glass-card{
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+box-shadow:
+0 0 30px rgba(255,105,180,.18),
+0 10px 40px rgba(0,0,0,.25);
+}
+
+/* ==========================
+COMMON TEXT
+========================== */
+
+h1,h2,h3{
+font-weight:600;
+line-height:1.4;
+}
+
+p{
+line-height:1.8;
+opacity:.95;
+margin:12px 0;
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+button{
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+padding:15px 28px;
+
+border-radius:999px;
+
+font-size:1rem;
+
+font-weight:600;
+
+color:#fff;
+
+background:
+linear-gradient(135deg,#ff5ea8,#b04dff);
+
+box-shadow:
+0 0 20px rgba(255,105,180,.35);
+
+transition:.35s;
+
+margin-top:18px;
+
+}
+
+button:active{
+
+transform:scale(.95);
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 35px rgba(255,105,180,.5);
+
+}
+
+/* ==========================
+LOADING SCREEN
+========================== */
+
+#loading-screen{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+rgba(18,5,31,.97);
+
+z-index:9999;
+
+}
+
+.loading-box{
+
+text-align:center;
+
+}
+
+.heart-loader{
+
+font-size:70px;
+
+animation:loaderBeat 1.2s infinite;
+
+}
+
+.loading-text{
+
+margin-top:18px;
+
+font-size:18px;
+
+letter-spacing:2px;
+
+}
+
+/* ==========================
+INTRO
+========================== */
+
+.intro-box h2{
+
+font-size:2rem;
+
+margin-bottom:18px;
+
+}
+
+.love-line{
+
+color:#ffd7ea;
+
+font-weight:600;
+
+}
+
+#typewriter{
+
+font-weight:700;
+
+color:#fff;
+
+}
+
+/* ==========================
+TRANSITION
+========================== */
+
+#transitionOverlay{
+
+position:fixed;
+
+inset:0;
+
+background:#12051f;
+
+opacity:0;
+
+pointer-events:none;
+
+z-index:9998;
+
+transition:.7s;
+
+}
+
+#phaseTransition{
+
+position:absolute;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+pointer-events:none;
+
+opacity:0;
+
+}
+
+.transition-heart{
+
+font-size:70px;
+
+animation:pulse 2s infinite;
+
+}
+
+/* ==========================
+KEYFRAMES
+========================== */
+
+@keyframes loaderBeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.18);
+
+}
+
+}
+/* ==========================================
+   PROJECT RIU ❤️
+   STYLE.CSS - PART 3
+========================================== */
+
+/* ==========================
+LOCK SECTION
+========================== */
+
+.lock-title{
+
+font-size:1.6rem;
+
+margin-bottom:25px;
+
+line-height:1.6;
+
+}
+
+#heartLock{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:30px auto;
+
+position:relative;
+
+}
+
+.lock-heart{
+
+font-size:90px;
+
+filter:drop-shadow(0 0 25px rgba(255,105,180,.8));
+
+animation:heartBeat 1.8s infinite;
+
+user-select:none;
+
+}
+
+.lock-hole{
+
+position:absolute;
+
+width:18px;
+
+height:18px;
+
+background:#fff;
+
+border-radius:50%;
+
+top:48%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+box-shadow:0 0 12px #fff;
+
+}
+
+.tap-lock{
+
+margin-top:18px;
+
+font-size:.95rem;
+
+opacity:.9;
+
+}
+
+/* ==========================
+KEYPAD
+========================== */
+
+#keypadBox{
+
+display:none;
+
+margin-top:35px;
+
+animation:fadeIn .5s ease;
+
+}
+
+.keypad-display{
+
+margin-bottom:18px;
+
+}
+
+#pinInput{
+
+width:100%;
+
+padding:16px;
+
+border-radius:15px;
+
+border:none;
+
+outline:none;
+
+font-size:1.2rem;
+
+text-align:center;
+
+background:rgba(255,255,255,.12);
+
+color:#fff;
+
+letter-spacing:10px;
+
+}
+
+.keypad{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:12px;
+
+margin-top:10px;
+
+}
+
+.key{
+
+height:60px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.15);
+
+font-size:1.1rem;
+
+font-weight:600;
+
+color:#fff;
+
+transition:.25s;
+
+}
+
+.key:active{
+
+transform:scale(.92);
+
+}
+
+.clear{
+
+background:rgba(255,80,120,.3);
+
+}
+
+/* ==========================
+POPUPS
+========================== */
+
+#hintPopup,
+#wrongMessage{
+
+display:none;
+
+margin-top:22px;
+
+padding:14px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.1);
+
+border:1px solid rgba(255,255,255,.15);
+
+animation:fadeIn .5s ease;
+
+}
+
+/* ==========================
+MAGICAL KEY
+========================== */
+
+#magicKeyScene{
+
+display:none;
+
+margin-top:30px;
+
+text-align:center;
+
+}
+
+.magicText{
+
+font-size:1.1rem;
+
+margin-bottom:10px;
+
+}
+
+.magicText2{
+
+font-size:1rem;
+
+opacity:.9;
+
+margin-bottom:22px;
+
+}
+
+#magicKey{
+
+font-size:75px;
+
+cursor:pointer;
+
+filter:drop-shadow(0 0 18px gold);
+
+animation:keyFloat 2s ease-in-out infinite;
+
+}
+
+/* ==========================
+KEYFRAMES
+========================== */
+
+@keyframes heartBeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+@keyframes keyFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+/* ==========================================
+   PROJECT RIU ❤️
+   STYLE.CSS - PART 4
+========================================== */
+
+/* ==========================
+GAME
+========================== */
+
+.game-title{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.game-subtitle{
+margin-bottom:20px;
+opacity:.9;
+}
+
+#scoreBoard{
+margin:20px auto;
+font-size:1.2rem;
+font-weight:600;
+color:var(--pink);
+}
+
+#gameArea{
+
+position:relative;
+
+width:100%;
+
+height:380px;
+
+margin-top:20px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+}
+
+.falling-heart{
+
+position:absolute;
+
+font-size:32px;
+
+animation:fallHeart linear forwards;
+
+cursor:pointer;
+
+user-select:none;
+
+}
+
+@keyframes fallHeart{
+
+from{
+
+transform:translateY(-60px);
+
+}
+
+to{
+
+transform:translateY(430px);
+
+}
+
+}
+
+#gameComplete{
+
+display:none;
+
+margin-top:25px;
+
+animation:fadeIn .6s ease;
+
+}
+
+/* ==========================
+LETTER
+========================== */
+
+#envelopeBox{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+#envelope{
+
+font-size:90px;
+
+cursor:pointer;
+
+transition:.4s;
+
+animation:floatText 2.5s infinite;
+
+}
+
+#envelope:hover{
+
+transform:scale(1.08);
+
+}
+
+#letterContainer{
+
+display:none;
+
+margin-top:20px;
+
+animation:fadeIn .8s ease;
+
+}
+
+#letterPaper{
+
+background:#fffaf7;
+
+color:#222;
+
+padding:25px;
+
+border-radius:22px;
+
+text-align:left;
+
+max-height:65vh;
+
+overflow-y:auto;
+
+box-shadow:0 10px 40px rgba(0,0,0,.25);
+
+}
+
+#letterPaper::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+#letterPaper::-webkit-scrollbar-thumb{
+
+background:#ff7ab8;
+
+border-radius:10px;
+
+}
+
+.letterLine{
+
+opacity:0;
+
+margin-bottom:14px;
+
+line-height:1.8;
+
+animation:fadeIn .8s forwards;
+
+}
+
+#continueEnding{
+
+display:block;
+
+margin:25px auto 5px;
+
+}
+
+/* ==========================
+SMALL EFFECTS
+========================== */
+
+.hidden{
+
+display:none !important;
+
+}
+
+.show{
+opacity:1 !important;
+visibility:visible !important;
+}
+
+.fade{
+
+animation:fadeIn .6s ease;
+
+}
+/* ===== TOAST ===== */
+
+#toastMessage{
+position:fixed;
+left:50%;
+bottom:30px;
+transform:translateX(-50%);
+padding:12px 22px;
+border-radius:30px;
+background:rgba(255,105,180,.9);
+color:#fff;
+font-weight:600;
+opacity:0;
+visibility:hidden;
+transition:.3s;
+z-index:99999;
+box-shadow:0 0 20px rgba(255,105,180,.4);
+}
+
+#toastMessage.show{
+opacity:1;
+visibility:visible;
+}
+#gameOverlay{
+position:absolute;
+inset:0;
+pointer-events:none;
+}
+
+#floatingGlow{
+position:fixed;
+inset:0;
+pointer-events:none;
+}
+#finalMessage{
+
+display:none;
+
+margin-top:25px;
+
+animation:fadeIn .8s ease;
+
+}
+
+.answer-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:20px;
+
+}
+/* ===== FINAL EFFECTS ===== */
+
+.star{
+
+position:absolute;
+width:3px;
+height:3px;
+background:#fff;
+border-radius:50%;
+animation:twinkle 2s infinite;
+
+}
+
+.bgHeart{
+
+position:absolute;
+bottom:-40px;
+animation:bgHeartFloat linear forwards;
+
+}
+
+.petal{
+
+position:absolute;
+top:-40px;
+animation:petalFall linear forwards;
+
+}
+
+.sparkle{
+
+position:absolute;
+animation:sparklePop 2s forwards;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{opacity:.2;}
+
+50%{opacity:1;}
+
+}
+
+@keyframes bgHeartFloat{
+
+from{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+@keyframes petalFall{
+
+from{
+transform:translateY(-40px) rotate(0deg);
+}
+
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+@keyframes sparklePop{
+
+0%{
+opacity:0;
+transform:scale(.3);
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:scale(1.5);
+}
+
+}
+#magicKeyScene{
+display:none;
+margin-top:30px;
+text-align:center;
+}
+
+#magicKey{
+display:inline-block;
+font-size:80px;
+cursor:pointer;
+opacity:1 !important;
+visibility:visible !important;
+z-index:9999;
+position:relative;
+animation:keyFloat 2s ease-in-out infinite;
+}
+/* ==========================
+CINEMATIC UNLOCK
+========================== */
+
+#magicKey{
+
+transition:
+transform 1.3s ease,
+left 1.3s ease,
+top 1.3s ease,
+opacity .8s;
+
+}
+
+.unlock-glow{
+
+animation:unlockGlow .8s ease;
+
+}
+
+@keyframes unlockGlow{
+
+0%{
+
+transform:scale(1);
+
+filter:drop-shadow(0 0 10px pink);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+filter:
+drop-shadow(0 0 45px #ff5ea8);
+
+}
+
+100%{
+
+transform:scale(1);
+
+filter:drop-shadow(0 0 10px pink);
+
+}
+
+}
+/* ==========================
+LETTER PREMIUM
+========================== */
+
+
+#continueEnding{
+display:block;
+margin:25px auto 5px;
+opacity:1;
+transform:none;
+}
+
+* ==========================
+ENVELOPE OPEN ANIMATION
+========================== */
+
+#envelope{
+
+transition:
+transform .7s ease,
+opacity .7s ease;
+
+}
+
+#envelope.open{
+
+transform:
+scale(.5)
+rotate(-20deg);
+
+opacity:0;
+
+}
+
+#letterContainer.show{
+
+opacity:1;
+transform:translateY(0);
+animation:fadeIn .8s ease;
+
+}
+
+#letterContainer.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+#finalMessage{
+display:none;
+margin-top:25px;
+animation:fadeIn .8s ease;
+color:#000;
+}
+
+#finalMessage h1,
+#finalMessage h2,
+#finalMessage h3,
+#finalMessage p{
+color:#000;
+}
