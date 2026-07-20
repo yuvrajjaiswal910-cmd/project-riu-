@@ -2,7 +2,7 @@
    PROJECT RIU ❤️
    SCRIPT.JS - PART 1
 ========================================== */
-
+alert("JS Loaded");
 // ===== ELEMENTS =====
 
 const loadingScreen = document.getElementById("loading-screen");
