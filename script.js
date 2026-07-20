@@ -26,6 +26,8 @@ let currentPhase = phase1;
 console.log("Changing phase...");
 // ===== SHOW PHASE FUNCTION =====
 
+// ===== SHOW PHASE FUNCTION =====
+
 function showPhase(nextPhase){
 
     phases.forEach(phase=>{
@@ -37,40 +39,10 @@ function showPhase(nextPhase){
     setTimeout(()=>{
 
         nextPhase.classList.add("active");
-
         currentPhase = nextPhase;
-
         transitionOverlay.style.opacity = "0";
 
     },500);
-
-}
-
-transitionOverlay.style.opacity="1";
-
-setTimeout(()=>{
-
-nextPhase.classList.add("active");
-
-currentPhase=nextPhase;
-
-transitionOverlay.style.opacity="0";
-
-},500);
-
-}
-
-transitionOverlay.style.opacity = "1";
-
-setTimeout(()=>{
-
-nextPhase.classList.add("active");
-
-currentPhase = nextPhase;
-
-transitionOverlay.style.opacity = "0";
-
-},500);
 
 }
 
